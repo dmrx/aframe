@@ -1,0 +1,30 @@
+{
+  "name": "first-test",
+  "description": "First Test.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "bundle": "browserify script.js -t babelify --outfile bundle.js",
+    "start": "live-server --port=7000",
+    "deploy": "ghpages"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "babelify": "^7.3.0",
+    "ghpages": "0.0.3",
+    "live-server": "^1.2.0"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-example",
+    "aframe-boilerplate",
+    "aframe-scene",
+    "webvr",
+    "vr"
+  ],
+  "dependencies": {
+    "browserify": "^14.1.0",
+    "howler": "^2.0.2"
+  }
+}
