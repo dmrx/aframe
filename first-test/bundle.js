@@ -2780,15 +2780,6 @@ require("howler");
 console.log("hasdafi");
 var circle = document.querySelector('a-circle');
 
-var c1 = document.getElementById('c1');
-console.log(c1);
-
-c1.appendChild(c2);
-
-var c2 = document.getElementById('c2');
-c2.appendChild(c3);
-var c3 = document.getElementById('c3');
-
 circle.addEventListener('mouseenter', function () {
   song.volume(song.volume() + .33), console.log("Volume Up", song.volume());
 });

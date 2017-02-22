@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "bundle": "browserify script.js -t babelify --outfile bundle.js",
-    "start": "live-server --port=7000",
+    "start": "browserify script.js -t babelify --outfile bundle.js && live-server --port=7000",
     "deploy": "ghpages"
   },
   "devDependencies": {

@@ -1,8 +1,7 @@
 import "howler";
 
 console.log("hasdafi")
-var circle = document.querySelector('a-circle')
-
+var circle = document.querySelector('a-circle');
 
 circle.addEventListener('mouseenter', function () {
   song.volume(song.volume() + .33),
@@ -18,7 +17,6 @@ var song = new Howl({
   src: ['song.mp3'],
   volume: 0.0,
 });
-
 
 
 song.play();
