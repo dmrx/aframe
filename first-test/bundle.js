@@ -2778,21 +2778,41 @@
 require("howler");
 
 console.log("hasdafi");
-var circle = document.querySelector('a-circle');
+var c1 = document.querySelector('#c1');
+var c2 = document.querySelector('#c2');
+var clickable = document.querySelector('.clickable');
 
-circle.addEventListener('mouseenter', function () {
+c1.addEventListener('mouseenter', function () {
   song.volume(song.volume() + .33), console.log("Volume Up", song.volume());
 });
 
-circle.addEventListener('mouseleave', function () {
+c1.addEventListener('mouseleave', function () {
   song.volume(song.volume() - .33), console.log("Volume Down", song.volume());
 });
 
+c2.addEventListener('mouseenter', function () {
+  song2.volume(song2.volume() + .33), console.log("Volume Up", song2.volume());
+});
+
+c2.addEventListener('mouseleave', function () {
+  song2.volume(song2.volume() - .33), console.log("Volume Down", song2.volume());
+});
+
+clickable.addEventListener('raycaster-intersected', function () {
+  console.log('Player hit something!');
+});
+
 var song = new Howl({
-  src: ['song.mp3'],
+  src: ['song.mp3', 'song2.mp3'],
+  volume: 0.0
+});
+
+var song2 = new Howl({
+  src: ['song2.mp3'],
   volume: 0.0
 });
 
 song.play();
+song2.play();
 
 },{"howler":1}]},{},[2]);
