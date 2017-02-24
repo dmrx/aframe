@@ -1,17 +1,17 @@
 import "howler";
 
 console.log("hasdafi")
-let c1 = document.querySelector('#c1');
+let c1 = document.querySelector('.c1');
 let c2 = document.querySelector('#c2');
 let clickable = document.querySelector('.clickable');
 
 
-c1.addEventListener('mouseenter', function () {
+c1.addEventListener('raycaster-intersected', function () {
   song.volume(song.volume() + .33),
   console.log("Volume Up", song.volume())
 });
 
-c1.addEventListener('mouseleave', function () {
+c1.addEventListener('raycaster-intersected-cleared', function () {
   song.volume(song.volume() - .33),
   console.log("Volume Down", song.volume())
 });
@@ -35,12 +35,12 @@ clickable.addEventListener('raycaster-intersected', function () {
 
 
 let song = new Howl({
-  src: ['song.mp3', 'song2.mp3'],
+  src: ['./song.mp3'],
   volume: 0.0,
 });
 
 let song2 = new Howl({
-  src: [ 'song2.mp3'],
+  src: [ './song2.mp3'],
   volume: 0.0,
 });
 

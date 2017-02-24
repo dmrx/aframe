@@ -2778,15 +2778,15 @@
 require("howler");
 
 console.log("hasdafi");
-var c1 = document.querySelector('#c1');
+var c1 = document.querySelector('.c1');
 var c2 = document.querySelector('#c2');
 var clickable = document.querySelector('.clickable');
 
-c1.addEventListener('mouseenter', function () {
+c1.addEventListener('raycaster-intersected', function () {
   song.volume(song.volume() + .33), console.log("Volume Up", song.volume());
 });
 
-c1.addEventListener('mouseleave', function () {
+c1.addEventListener('raycaster-intersected-cleared', function () {
   song.volume(song.volume() - .33), console.log("Volume Down", song.volume());
 });
 
@@ -2803,12 +2803,12 @@ clickable.addEventListener('raycaster-intersected', function () {
 });
 
 var song = new Howl({
-  src: ['song.mp3', 'song2.mp3'],
+  src: ['./song.mp3'],
   volume: 0.0
 });
 
 var song2 = new Howl({
-  src: ['song2.mp3'],
+  src: ['./song2.mp3'],
   volume: 0.0
 });
 
